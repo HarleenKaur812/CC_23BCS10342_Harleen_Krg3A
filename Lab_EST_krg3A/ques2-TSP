@@ -31,10 +31,7 @@ public:
     int total_cost(vector<vector<int>> cost) {
         int n = cost.size();
 
-        // dp[mask][pos] = minimum cost to visit remaining cities
         vector<vector<int>> dp(1 << n, vector<int>(n, -1));
-
-        // Start from city 0, only city 0 is visited initially
         return tsp(1, 0, cost, dp);
     }
 };
